@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
          searchField: 'valor',
          maxItems:1,
          load: function(query, callback) {
-             fetch(`https://esenttiapp-production.up.railway.app/api/showcostos?search=${encodeURIComponent(query)}`,{
+             fetch(`http://esenttiapp.test/api/showcostos?search=${encodeURIComponent(query)}`,{
                  method: 'GET',
                      headers: {
                      'Authorization': `Bearer ${localStorage.getItem("authToken")}`

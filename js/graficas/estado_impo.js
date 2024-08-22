@@ -115,7 +115,7 @@ const myChartImportacion = new Chart(ctxImportacion, {
     }
 });
 
-    fetch('https://esenttiapp-production.up.railway.app/api/estadoimpo',{
+    fetch('http://esenttiapp.test/api/estadoimpo',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

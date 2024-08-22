@@ -54,7 +54,7 @@ new gridjs.Grid({
     ],
     }],
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/uploadrutas",
+        url: "http://esenttiapp.test/api/uploadrutas",
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -81,7 +81,7 @@ new gridjs.Grid({
   
     const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-    fetch('https://esenttiapp-production.up.railway.app/api/rutas', {
+    fetch('http://esenttiapp.test/api/rutas', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',

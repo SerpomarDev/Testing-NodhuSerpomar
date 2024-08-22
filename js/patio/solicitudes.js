@@ -16,7 +16,7 @@ new gridjs.Grid({
         hidden: true,
     }],
     server: {
-        url: 'https://esenttiapp-production.up.railway.app/api/',
+        url: 'http://esenttiapp.test/api/',
         then: (data) => {
             if (Array.isArray(data) && data.length > 0) {
                 return data.map((

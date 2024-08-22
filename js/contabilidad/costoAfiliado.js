@@ -68,7 +68,7 @@ new gridjs.Grid({
     ],
     fixedHeader: true,
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/asignacionespendienteordencompra`,
+        url: `http://esenttiapp.test/api/asignacionespendienteordencompra`,
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -135,7 +135,7 @@ function actualizarFactura() {
     };
   });
 
-  fetch('https://esenttiapp-production.up.railway.app/api/actualizarfacturas', {
+  fetch('http://esenttiapp.test/api/actualizarfacturas', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',

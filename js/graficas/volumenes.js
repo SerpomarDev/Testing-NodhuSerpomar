@@ -90,7 +90,7 @@ const myChart = new Chart(ctx, {
     }
 });
 
-    fetch('https://esenttiapp-production.up.railway.app/api/volumenesimpexp',{
+    fetch('http://esenttiapp.test/api/volumenesimpexp',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

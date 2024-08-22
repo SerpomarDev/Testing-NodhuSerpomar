@@ -89,7 +89,7 @@ let optionsProyectos = {
 let myCharts = new ApexCharts(cts, optionsProyectos);
 myCharts.render();
 
-    fetch("https://esenttiapp-production.up.railway.app/api/resumenproyectos",{
+    fetch("http://esenttiapp.test/api/resumenproyectos",{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -198,7 +198,7 @@ let optionsEstados = {
 let myChart = new ApexCharts(ctx, optionsEstados);
 myChart.render();
 
-    fetch("https://esenttiapp-production.up.railway.app/api/resumenestados",{
+    fetch("http://esenttiapp.test/api/resumenestados",{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

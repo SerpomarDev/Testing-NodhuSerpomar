@@ -1,5 +1,5 @@
 
-       const apiUrl = 'https://esenttiapp-production.up.railway.app/api/asignacionespendienteordencompra';
+       const apiUrl = 'http://esenttiapp.test/api/asignacionespendienteordencompra';
 
        async function fetchData() {
            try {

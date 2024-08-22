@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ],
         }],
         server: {
-            url: "https://esenttiapp-production.up.railway.app/api/showclientes",
+            url: "http://esenttiapp.test/api/showclientes",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -114,7 +114,7 @@ document.getElementById('createCliente').addEventListener('submit', function(eve
 
     const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-    fetch('https://esenttiapp-production.up.railway.app/api/clientes', {
+    fetch('http://esenttiapp.test/api/clientes', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',

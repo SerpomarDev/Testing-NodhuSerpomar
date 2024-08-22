@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
       searchField: 'nombre',
       maxItems:1,
       load: function(query, callback) {
-          fetch(`https://esenttiapp-production.up.railway.app/api/uploadconductor?search=${encodeURIComponent(query)}`,{
+          fetch(`http://esenttiapp.test/api/uploadconductor?search=${encodeURIComponent(query)}`,{
             method: 'GET',
               headers: {
                   'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let idConductorSeleccionado = this.value
 
-        fetch(`https://esenttiapp-production.up.railway.app/api/uploadoptid/${idConductorSeleccionado}`,{
+        fetch(`http://esenttiapp.test/api/uploadoptid/${idConductorSeleccionado}`,{
           method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

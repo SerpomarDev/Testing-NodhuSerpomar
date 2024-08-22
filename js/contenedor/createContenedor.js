@@ -6,7 +6,7 @@ liquidarSp(id)
 cargarValores(id)
 
 function cargarValores(id){
-    fetch(`https://esenttiapp-production.up.railway.app/api/uploadsolisev/${id}`,{
+    fetch(`http://esenttiapp.test/api/uploadsolisev/${id}`,{
       method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -121,7 +121,7 @@ function tableByClt(id_primario){
     fixedHeader: true,
     //height: '400px',
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/preasigcont/${id}`,
+        url: `http://esenttiapp.test/api/preasigcont/${id}`,
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`
       },

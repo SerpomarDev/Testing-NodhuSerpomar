@@ -1,4 +1,4 @@
-fetch('https://esenttiapp-production.up.railway.app/api/totalasignacionabiertas',{
+fetch('http://esenttiapp.test/api/totalasignacionabiertas',{
     method: 'GET',
       headers: {
           'Authorization': `Bearer ${localStorage.getItem("authToken")}`

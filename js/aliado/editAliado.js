@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/uploadaliadoid/${id}`,{
+    fetch(`http://esenttiapp.test/api/uploadaliadoid/${id}`,{
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -45,7 +45,7 @@ let id = urlParams.get("id");
         sort: false,
         columns: ["#","Nombre", "Razon social", "Telefono"],
         server: {
-            url: "https://esenttiapp-production.up.railway.app/api/showaliado",
+            url: "http://esenttiapp.test/api/showaliado",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -73,7 +73,7 @@ let id = urlParams.get("id");
         const formData = new FormData(this);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-        fetch(`https://esenttiapp-production.up.railway.app/api/aliados/${id}`, {
+        fetch(`http://esenttiapp.test/api/aliados/${id}`, {
             method: "PUT",
             headers: { 
                 "Content-Type": "application/json",

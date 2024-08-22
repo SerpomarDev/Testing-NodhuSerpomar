@@ -1,5 +1,5 @@
 function actualizarEstado(idOperacion, nuevoEstado) {
-    fetch(`https://esenttiapp-production.up.railway.app/api/actualizaroperacionp/${nuevoEstado}/${idOperacion}`, {
+    fetch(`http://esenttiapp.test/api/actualizaroperacionp/${nuevoEstado}/${idOperacion}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function actualizarEstado(idOperacion, nuevoEstado) {
 }
 
 function comentario(id, comentario) {
-    fetch(`https://esenttiapp-production.up.railway.app/api/actualizarcomentario/${comentario}/${id}`, {
+    fetch(`http://esenttiapp.test/api/actualizarcomentario/${comentario}/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ new gridjs.Grid({
     ],
     fixedHeader: true,
     server: {
-        url: 'https://esenttiapp-production.up.railway.app/api/uploadordencargue',
+        url: 'http://esenttiapp.test/api/uploadordencargue',
         headers: {
             // Aquí se incluye el token desde el localStorage
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
@@ -169,7 +169,7 @@ function time() {
 }
 
 function salidaContenedor($contenedor, $operacion) {
-    fetch(`https://esenttiapp-production.up.railway.app/api/actualizaroperacionp/${contenedor}/${operacion}`, {
+    fetch(`http://esenttiapp.test/api/actualizaroperacionp/${contenedor}/${operacion}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

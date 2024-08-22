@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-fetch(`https://esenttiapp-production.up.railway.app/api/editplaca/${id}`, {
+fetch(`http://esenttiapp.test/api/editplaca/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -56,7 +56,7 @@ new gridjs.Grid({
         hidden: true,
     }],
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/showplaca",
+        url: "http://esenttiapp.test/api/showplaca",
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -90,7 +90,7 @@ document.getElementById("editPlaca").addEventListener("submit", function(event) 
     const formData = new FormData(this);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/placas/${id}`, {
+    fetch(`http://esenttiapp.test/api/placas/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

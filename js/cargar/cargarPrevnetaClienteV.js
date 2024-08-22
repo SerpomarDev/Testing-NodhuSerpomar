@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let inputAliado = document.getElementById('aliado')
     let inputTelefono = document.getElementById('celular')
 
-    fetch('https://esenttiapp-production.up.railway.app/api/showclivarios',{
+    fetch('http://esenttiapp.test/api/showclivarios',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let idPlacaSelecionada = this.value
 
-            fetch(`https://esenttiapp-production.up.railway.app/api/uploadclivariosid/${idPlacaSelecionada}`,{
+            fetch(`http://esenttiapp.test/api/uploadclivariosid/${idPlacaSelecionada}`,{
                 method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem("authToken")}`

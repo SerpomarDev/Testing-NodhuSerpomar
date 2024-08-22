@@ -30,7 +30,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         data[key] = value;
     }
 
-    fetch('https://esenttiapp-production.up.railway.app/api/register', {
+    fetch('http://esenttiapp.test/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -1,7 +1,7 @@
 document.getElementById('GeneReportExcel').addEventListener('click', function(event){
     event.preventDefault();
 
-    fetch('https://esenttiapp-production.up.railway.app/api/axcelasignacion',{
+    fetch('http://esenttiapp.test/api/axcelasignacion',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

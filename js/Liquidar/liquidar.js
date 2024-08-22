@@ -44,7 +44,7 @@ let id = urlParams.get("id");
             formatter:(_,row)=> `$ ${(row.cells[2].data)}`
         }],
         server: {
-            url: `https://esenttiapp-production.up.railway.app/api/liquidarspt/${id}`,
+            url: `http://esenttiapp.test/api/liquidarspt/${id}`,
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -70,7 +70,7 @@ let id = urlParams.get("id");
         const formData = new FormData(this);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-        fetch('https://esenttiapp-production.up.railway.app/api/liquidacion',{
+        fetch('http://esenttiapp.test/api/liquidacion',{
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-fetch(`https://esenttiapp-production.up.railway.app/api/editconductor/${id}`, {
+fetch(`http://esenttiapp.test/api/editconductor/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -43,7 +43,7 @@ document.getElementById("editConductor").addEventListener("submit", function(eve
 
 
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/conductores/${id}`, {
+    fetch(`http://esenttiapp.test/api/conductores/${id}`, {
 
         method: "PUT",
         headers: {

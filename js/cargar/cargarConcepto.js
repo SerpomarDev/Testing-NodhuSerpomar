@@ -3,7 +3,7 @@
       
         let selectConcepto = document.getElementById('id_tarifa');
   
-        fetch(`https://esenttiapp-production.up.railway.app/api/uploadconceptosbyidcl/${id}`,{
+        fetch(`http://esenttiapp.test/api/uploadconceptosbyidcl/${id}`,{
           method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -24,7 +24,7 @@
   
          let idselectConcepto = this.value
   
-            fetch(`https://esenttiapp-production.up.railway.app/api/uploadconceptosbyid/${idselectConcepto}`,{
+            fetch(`http://esenttiapp.test/api/uploadconceptosbyid/${idselectConcepto}`,{
               method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

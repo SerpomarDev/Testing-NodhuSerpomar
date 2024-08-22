@@ -20,7 +20,7 @@ new gridjs.Grid({
         formatter:(_,row)=> `$ ${(row.cells[4].data).toLocaleString()}`
     }],
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/showpreliquidarbycontenedor/${id}`,
+        url: `http://esenttiapp.test/api/showpreliquidarbycontenedor/${id}`,
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -49,7 +49,7 @@ document.getElementById('savePreLiquidacion').addEventListener('submit',function
 
     console.log(jsonData)
     
-    fetch('https://esenttiapp-production.up.railway.app/api/costoclientecontenedor',{
+    fetch('http://esenttiapp.test/api/costoclientecontenedor',{
         method: 'POST',
         headers: {
              'Content-Type': 'application/json',

@@ -22,7 +22,7 @@ new gridjs.Grid({
     ],
     fixedHeader: true,
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/asignacionespagadas`,
+        url: `http://esenttiapp.test/api/asignacionespagadas`,
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },

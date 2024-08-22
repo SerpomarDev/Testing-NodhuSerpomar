@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let inputCantidadContenedor = document.getElementById('cantidad_contenedor');
   let inputValor = document.getElementById('valor');
 
-  fetch(`https://esenttiapp-production.up.railway.app/api/cargarcontenedorbypre/${id}`,{
+  fetch(`http://esenttiapp.test/api/cargarcontenedorbypre/${id}`,{
     method: 'GET',
        headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       function uploadConceptos(idcliente){ 
   
-        fetch(`https://esenttiapp-production.up.railway.app/api/uploadconceptosbyidcl/${idcliente}`,{
+        fetch(`http://esenttiapp.test/api/uploadconceptosbyidcl/${idcliente}`,{
           method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
          let idselectConcepto = this.value
          console.log(idselectConcepto)
   
-            fetch(`https://esenttiapp-production.up.railway.app/api/uploadconceptosbyid/${idselectConcepto}`,{
+            fetch(`http://esenttiapp.test/api/uploadconceptosbyid/${idselectConcepto}`,{
               method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

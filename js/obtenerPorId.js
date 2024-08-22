@@ -10,8 +10,8 @@ document.getElementById("PreventaEdit").addEventListener("submit", function (eve
 
     // Utilizamos la función para obtener la información asociada a los IDs
     Promise.all([
-        obtenerInformacionPorId(`https://esenttiapp-production.up.railway.app/api/loadplacaid/${idPlaca}`),
-        obtenerInformacionPorId(`https://esenttiapp-production.up.railway.app/api/uploadoptid/${idConductor}`)
+        obtenerInformacionPorId(`http://esenttiapp.test/api/loadplacaid/${idPlaca}`),
+        obtenerInformacionPorId(`http://esenttiapp.test/api/uploadoptid/${idConductor}`)
     ])
     .then(data => {
         let placa = data[0].placa;

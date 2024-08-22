@@ -11,7 +11,7 @@ if (id) {
 }
 
 function cargarValores(id) {
-        fetch(`https://esenttiapp-production.up.railway.app/api/asignacioncontenedors/${id}`,{
+        fetch(`http://esenttiapp.test/api/asignacioncontenedors/${id}`,{
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -125,7 +125,7 @@ function crearTablas(id_contenedor, id_cliente, impExpValor) {
         ],
         fixedHeader: true,
         server: {
-            url: `https://esenttiapp-production.up.railway.app/api/uploadexpo/${id_contenedor}/${id_cliente}`,
+            url: `http://esenttiapp.test/api/uploadexpo/${id_contenedor}/${id_cliente}`,
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -233,7 +233,7 @@ function crearTablas(id_contenedor, id_cliente, impExpValor) {
         ],
         fixedHeader: true,
         server: {
-            url: `https://esenttiapp-production.up.railway.app/api/uploadimpo/${id_contenedor}/${id_cliente}`,
+            url: `http://esenttiapp.test/api/uploadimpo/${id_contenedor}/${id_cliente}`,
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -294,7 +294,7 @@ function cancelarAsignacion(id) {
 
 function contenedorByAsignacion(id){
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/asignacioncontenedors/${id}`,{
+    fetch(`http://esenttiapp.test/api/asignacioncontenedors/${id}`,{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

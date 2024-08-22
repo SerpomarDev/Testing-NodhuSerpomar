@@ -7,7 +7,7 @@ document.getElementById('createCostoClientes').addEventListener('submit', functi
 
     console.log(jsonData)
     
-    fetch('https://esenttiapp-production.up.railway.app/api/costocliente', {
+    fetch('http://esenttiapp.test/api/costocliente', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',

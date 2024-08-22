@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/editcontenedor/${id}`,{
+    fetch(`http://esenttiapp.test/api/editcontenedor/${id}`,{
       method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -40,7 +40,7 @@ let id = urlParams.get("id");
 
         console.log(jsonData)
 
-        fetch(`https://esenttiapp-production.up.railway.app/api/contenedores/${id}`, {
+        fetch(`http://esenttiapp.test/api/contenedores/${id}`, {
             method: "PUT",
             headers: { 
               "Content-Type": "application/json",
