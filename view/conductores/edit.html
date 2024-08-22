@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodhus</title>
+    <link rel="icon" href="/faviconN.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="/css/pages.css" rel="stylesheet" />
+    <link href="/css/style-Dash.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+</head>
+<header>
+    <img src="/img/nodhus.png" alt="Nodhus Logo" class="logo" id="nodhus-logo">
+
+</header>
+<div class="dlabnav">
+    <div id="layout">
+
+        <div class="dlabnav" id="sidebar">
+            <div class="dlabnav-scroll sidebar-scroll">
+                <ul class="metismenu" id="menu">
+                    <li id="roles-container"></li>
+                    <li id="menu-items-container"></li>
+                    <nav>
+                        <a href="javascript:void(0)" id="logout-button" class="logout-link" aria-expanded="false">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="nav-text">Cerrar Sesión</span>
+                        </a>
+                    </nav>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+    <div id="main-wrapper">
+        <div class="header">
+            <div class="title-container">
+                <div class="circle"></div>
+                <h1 class="title">EDITAR CONDUCTOR</h1>
+            </div>
+        </div>
+
+
+
+        <div class="margenform">
+            <div id="content" class="p-4 p-md-5 pt-5">
+                <div class="container">
+                    <form id="editConductor" method="PUT" enctype="multipart/form-data" class="form">
+                        <input type="hidden" id="id" name="id">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="text" class="input" id="nombre" name="nombre" required>
+                                        <span>Nombre</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="number" class="input" id="identificacion" name="identificacion" required>
+                                        <span>Identificación</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="number" class="input" id="telefono" name="telefono" required>
+                                        <span>Teléfono</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="email" class="input" id="email" name="email">
+                                        <span>Email</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="number" class="input" id="numero_licencia" name="numero_licencia" >
+                                        <span>No. licencia</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>
+                                        <input type="date" class="input" id="fecha_vencimiento" name="fecha_vencimiento">
+                                        <span>Vencemiento licencia</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+
+                                    <a class="btn btn-primary" href="/view/conductores/create.html">Volver</a>
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+
+
+                                    <button class="btn btn-primary" id="editBtn">Enviar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="container">
+                    <div id="conductoresedit"></div>
+                </div>
+            </div>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="/Componentes/sidebar.js"></script>
+            <script src="/js/login/logout.js"></script>
+
+
+
+
+            <script src="/js/custom.min.js"></script>
+            <script type="text/javascript" src="/js/conductor/edtiConductor.js"></script>
+            <script type="text/javascript" src="/js/conductor/createConductor.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
