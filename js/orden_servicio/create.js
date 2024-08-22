@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-fetch(`https://esenttiapp-production.up.railway.app/api/showcontenedor/${id}`,{
+fetch(`http://esenttiapp.test/api/showcontenedor/${id}`,{
   method: 'GET',
       headers: {
       'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -68,7 +68,7 @@ fetch(`https://esenttiapp-production.up.railway.app/api/showcontenedor/${id}`,{
       }
     }],
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/showordenerv/${id}`,
+        url: `http://esenttiapp.test/api/showordenerv/${id}`,
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`
       },
@@ -111,7 +111,7 @@ function editOrdenseV(id){
     const jsonData = JSON.stringify(Object.fromEntries(formData));
   
     console.log(jsonData);
-    fetch('https://esenttiapp-production.up.railway.app/api/ordenservicios',{
+    fetch('http://esenttiapp.test/api/ordenservicios',{
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

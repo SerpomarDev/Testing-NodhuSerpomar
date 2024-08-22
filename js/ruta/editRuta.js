@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/uploadrutaid/${id}`,{
+    fetch(`http://esenttiapp.test/api/uploadrutaid/${id}`,{
         method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -45,7 +45,7 @@ let id = urlParams.get("id");
         sort: false,
         columns: ["#","Nombre", "Tarifas", "Comentario"],
         server: {
-            url: "https://esenttiapp-production.up.railway.app/api/uploadrutas",
+            url: "http://esenttiapp.test/api/uploadrutas",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -72,7 +72,7 @@ let id = urlParams.get("id");
         const formData = new FormData(this);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-            fetch(`https://esenttiapp-production.up.railway.app/api/rutas/${id}`, {
+            fetch(`http://esenttiapp.test/api/rutas/${id}`, {
                 method: "PUT",
                 headers:{ 
                             "Content-Type": "application/json",

@@ -6,7 +6,7 @@ let id = urlParams.get("id");
 
 let originalValues;
 // Cargamos los datos iniciales del formulario
-    fetch(`https://esenttiapp-production.up.railway.app/api/cargaredit/${id}`,{
+    fetch(`http://esenttiapp.test/api/cargaredit/${id}`,{
       method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -54,7 +54,7 @@ document.getElementById("PreventaEdit").addEventListener("submit", function (eve
         const formData = new FormData(this);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-        fetch(`https://esenttiapp-production.up.railway.app/api/preventas/${id}`, {
+        fetch(`http://esenttiapp.test/api/preventas/${id}`, {
             method: "PUT",
             headers: { 
               "Content-Type": "application/json",

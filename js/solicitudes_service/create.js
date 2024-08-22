@@ -41,7 +41,7 @@ document.getElementById('saveSolicitud').addEventListener('submit',function(even
 
     console.log(jsonData)
 
-    fetch('https://esenttiapp-production.up.railway.app/api/solicitudservicios', {
+    fetch('http://esenttiapp.test/api/solicitudservicios', {
         method: 'POST',
         headers: { 
                     "Content-Type": "application/json",
@@ -55,7 +55,7 @@ document.getElementById('saveSolicitud').addEventListener('submit',function(even
         }
     })
     .then(data => {
-        return fetch('https://esenttiapp-production.up.railway.app/api/ultimoresgistro',{
+        return fetch('http://esenttiapp.test/api/ultimoresgistro',{
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

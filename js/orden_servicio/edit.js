@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-fetch(`https://esenttiapp-production.up.railway.app/api/uploadordensevid/${id}`,{
+fetch(`http://esenttiapp.test/api/uploadordensevid/${id}`,{
     method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -59,7 +59,7 @@ function table(idContenedor){
             hidden:false,
         },"Numero serie","Fecha cargue", "Hora cargue", "Fecha descargue", "Hora descargue","Fecha devolucion", "Fecha inspeccion","Patio"],
         server: {
-            url: `https://esenttiapp-production.up.railway.app/api/showordenerv/${idContenedor}`,
+            url: `http://esenttiapp.test/api/showordenerv/${idContenedor}`,
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },
@@ -95,7 +95,7 @@ function table(idContenedor){
 
     console.log(jsonData)
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/ordenservicios/${id}`, {
+    fetch(`http://esenttiapp.test/api/ordenservicios/${id}`, {
         method: "PUT",
         headers: { 
             "Content-Type": "application/json",

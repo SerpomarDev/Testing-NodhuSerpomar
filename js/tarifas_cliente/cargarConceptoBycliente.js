@@ -1,7 +1,7 @@
 // document.addEventListener('DOMContentLoaded',function(){
 //     let selectCliente = document.getElementById('id_concepto');
 
-//     fetch('https://esenttiapp-production.up.railway.app/api/uploadconceptos',{
+//     fetch('http://esenttiapp.test/api/uploadconceptos',{
 //         method: 'GET',
 //             headers: {
 //                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function(){
          searchField: 'concepto',
          maxItems:1,
          load: function(query, callback) {
-             fetch(`https://esenttiapp-production.up.railway.app/api/uploadconceptos?search=${encodeURIComponent(query)}`,{
+             fetch(`http://esenttiapp.test/api/uploadconceptos?search=${encodeURIComponent(query)}`,{
                  method: 'GET',
                      headers: {
                      'Authorization': `Bearer ${localStorage.getItem("authToken")}`

@@ -54,7 +54,7 @@
         }
       ],
         server: {
-            url: "https://esenttiapp-production.up.railway.app/api/selectbyinac",
+            url: "http://esenttiapp.test/api/selectbyinac",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },

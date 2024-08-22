@@ -2,7 +2,7 @@
         
         let selectPlaca = document.getElementById('id_placa');
 
-        fetch('https://esenttiapp-production.up.railway.app/api/loadplaca')
+        fetch('http://esenttiapp.test/api/loadplaca')
         .then(response => response.json())
         .then(data => {
             data.forEach(placa => {

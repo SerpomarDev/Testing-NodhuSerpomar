@@ -60,7 +60,7 @@ let id = urlParams.get("id");
         }],
             
         server: {
-            url: "https://esenttiapp-production.up.railway.app/api/showeditsolicitud",
+            url: "http://esenttiapp.test/api/showeditsolicitud",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`
             },

@@ -54,7 +54,7 @@ new gridjs.Grid({
         ],
     }],
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/showcostos",
+        url: "http://esenttiapp.test/api/showcostos",
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -80,7 +80,7 @@ document.getElementById('createCosto').addEventListener('submit', function(event
 
     const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-    fetch('https://esenttiapp-production.up.railway.app/api/costos', {
+    fetch('http://esenttiapp.test/api/costos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

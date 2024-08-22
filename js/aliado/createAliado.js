@@ -94,7 +94,7 @@ const columnDefs = [
   
     const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-    fetch('https://esenttiapp-production.up.railway.app/api/aliados', {
+    fetch('http://esenttiapp.test/api/aliados', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',

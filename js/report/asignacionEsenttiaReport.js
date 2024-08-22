@@ -1,7 +1,7 @@
 document.getElementById('GeneReport').addEventListener('click', function(event){
     event.preventDefault();
 
-    fetch('https://esenttiapp-production.up.railway.app/api/pdfasinacionesenttia',{
+    fetch('http://esenttiapp.test/api/pdfasinacionesenttia',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

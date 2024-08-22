@@ -1,5 +1,5 @@
 
-fetch(`https://esenttiapp-production.up.railway.app/api/totalbyContenedor/${id}`,{
+fetch(`http://esenttiapp.test/api/totalbyContenedor/${id}`,{
   method: 'GET',
     headers: {
         'Authorization': `Bearer ${localStorage.getItem("authToken")}`

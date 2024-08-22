@@ -1,4 +1,4 @@
-fetch('https://esenttiapp-production.up.railway.app/api/valorasignacionesabiertas',{
+fetch('http://esenttiapp.test/api/valorasignacionesabiertas',{
     method: 'GET',
       headers: {
           'Authorization': `Bearer ${localStorage.getItem("authToken")}`

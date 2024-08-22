@@ -32,7 +32,7 @@
   /* fixedHeader: true,
   height: '400px', */
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/showesenttia",
+        url: "http://esenttiapp.test/api/showesenttia",
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },

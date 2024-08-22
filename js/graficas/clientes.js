@@ -70,7 +70,7 @@ const myChartClientes = new Chart(ctxClientes, {
     }
 });
 
-    fetch('https://esenttiapp-production.up.railway.app/api/estadobyclientes',{
+    fetch('http://esenttiapp.test/api/estadobyclientes',{
         method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

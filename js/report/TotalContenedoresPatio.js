@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded',()=>{
         switch(selectedValue){
             
             case 'endpointone':
-                endpoint = 'https://esenttiapp-production.up.railway.app/api/exceltotalcontenedores',
+                endpoint = 'http://esenttiapp.test/api/exceltotalcontenedores',
                 fileName = 'entrada_y_salida.xlsx';
                 break;
 
             case 'endpointtwo':
-                endpoint = 'https://esenttiapp-production.up.railway.app/api/excelinventariocontenedores',
+                endpoint = 'http://esenttiapp.test/api/excelinventariocontenedores',
                 fileName = 'inventario.xlsx';
                 break;
 

@@ -1,6 +1,6 @@
 window.onload = function() {
     // Realizar la llamada a la API una sola vez
-    fetch("https://esenttiapp-production.up.railway.app/api/cargarinventario", {
+    fetch("http://esenttiapp.test/api/cargarinventario", {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

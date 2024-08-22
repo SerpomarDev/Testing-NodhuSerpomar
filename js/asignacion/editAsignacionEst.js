@@ -6,7 +6,7 @@ cargarValores(id)
 
 function cargarValores(id){
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/editasignacion/${id}`,{
+    fetch(`http://esenttiapp.test/api/editasignacion/${id}`,{
       method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -59,7 +59,7 @@ function cargarValores(id){
         fixedHeader: true,
         //height: '400px',
         server: {
-            url: "https://esenttiapp-production.up.railway.app/api/showasignacionest",
+            url: "http://esenttiapp.test/api/showasignacionest",
             headers: {
               Authorization: `Bearer ${localStorage.getItem("authToken")}`
           },
@@ -98,7 +98,7 @@ document.getElementById("editAsignacionEsnt").addEventListener("submit", functio
     const formData = new FormData(this);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/asignaciones/${id}`, {
+    fetch(`http://esenttiapp.test/api/asignaciones/${id}`, {
         method: "PUT",
         headers: { 
           "Content-Type": "application/json",

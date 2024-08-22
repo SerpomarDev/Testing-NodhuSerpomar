@@ -66,7 +66,7 @@ new gridjs.Grid({
         }
     ],
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/showplaca",
+        url: "http://esenttiapp.test/api/showplaca",
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -111,7 +111,7 @@ document.getElementById('createPlaca').addEventListener('submit', function(event
         return value;
     });
 
-    fetch('https://esenttiapp-production.up.railway.app/api/placas', {
+    fetch('http://esenttiapp.test/api/placas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -5,7 +5,7 @@ document.getElementById('PreventaCreate').addEventListener('submit', function(ev
   
     const jsonData = JSON.stringify(Object.fromEntries(formData));
     
-    fetch('https://esenttiapp-production.up.railway.app/api/preventas', {
+    fetch('http://esenttiapp.test/api/preventas', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

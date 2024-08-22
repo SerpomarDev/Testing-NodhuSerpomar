@@ -1,5 +1,5 @@
 function actualizarEstado(idOperacion,nuevoEstado) {
-  fetch(`https://esenttiapp-production.up.railway.app/api/actualizaroperacion/${nuevoEstado}/${idOperacion}`, {
+  fetch(`http://esenttiapp.test/api/actualizaroperacion/${nuevoEstado}/${idOperacion}`, {
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ new gridjs.Grid({
       },
     }],
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/showoperacion",
+        url: "http://esenttiapp.test/api/showoperacion",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`
       },

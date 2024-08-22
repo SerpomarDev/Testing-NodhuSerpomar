@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     let selectDestinos = document.getElementById('id_sitio_inspeccion')
 
-    fetch('https://esenttiapp-production.up.railway.app/api/destinos',{
+    fetch('http://esenttiapp.test/api/destinos',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

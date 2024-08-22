@@ -3,7 +3,7 @@ document.getElementById('createOrdenCargue').addEventListener('submit', function
     const formData = new FormData(this);
     const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-    fetch('https://esenttiapp-production.up.railway.app/api/ordencargue', {
+    fetch('http://esenttiapp.test/api/ordencargue', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ document.getElementById('createOrdenCargue').addEventListener('submit', function
         })
         .then(response => {
             if (response.ok) {
-                return fetch('https://esenttiapp-production.up.railway.app/api/ultimoresgistrood', {
+                return fetch('http://esenttiapp.test/api/ultimoresgistrood', {
                     headers: {
                         'Authorization': `Bearer ${localStorage.getItem("authToken")}`
                     }

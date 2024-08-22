@@ -1,7 +1,7 @@
-const apiLibreHasta = "https://esenttiapp-production.up.railway.app/api/notilibrehastaimp";
-const apiBodegajeHasta = "https://esenttiapp-production.up.railway.app/api/notibodegahastaimp";
-const apiFechaDocumental = "https://esenttiapp-production.up.railway.app/api/notifechadocuexp";
-const apiCutoffFisico = "https://esenttiapp-production.up.railway.app/api/noticutofffisexp";
+const apiLibreHasta = "http://esenttiapp.test/api/notilibrehastaimp";
+const apiBodegajeHasta = "http://esenttiapp.test/api/notibodegahastaimp";
+const apiFechaDocumental = "http://esenttiapp.test/api/notifechadocuexp";
+const apiCutoffFisico = "http://esenttiapp.test/api/noticutofffisexp";
 
 const token = localStorage.getItem('authToken');
 

@@ -1,6 +1,6 @@
 // window.onload = function() {
 //     // Obtener los datos de la API
-//     fetch("https://esenttiapp-production.up.railway.app/api/ordencargue")
+//     fetch("http://esenttiapp.test/api/ordencargue")
 //         .then(response => response.json())
 //         .then(data => {
 //             // Contar importaciones, exportaciones y traslados

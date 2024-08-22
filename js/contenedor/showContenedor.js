@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-  fetch(`https://esenttiapp-production.up.railway.app/api/showcontenedor/${id}`,{
+  fetch(`http://esenttiapp.test/api/showcontenedor/${id}`,{
     method: 'GET',
       headers: {
           'Authorization': `Bearer ${localStorage.getItem("authToken")}`

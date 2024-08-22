@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     let selectTipoContenedor = document.getElementById('id_tipo_contenedor');
 
-    fetch('https://esenttiapp-production.up.railway.app/api/tipocontenedores',{
+    fetch('http://esenttiapp.test/api/tipocontenedores',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

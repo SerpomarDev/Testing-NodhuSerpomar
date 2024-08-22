@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
          searchField: 'nombre',
          maxItems:1,
          load: function(query, callback) {
-             fetch(`https://esenttiapp-production.up.railway.app/api/uploadclientes?search=${encodeURIComponent(query)}`,{
+             fetch(`http://esenttiapp.test/api/uploadclientes?search=${encodeURIComponent(query)}`,{
                  method: 'GET',
                      headers: {
                      'Authorization': `Bearer ${localStorage.getItem("authToken")}`

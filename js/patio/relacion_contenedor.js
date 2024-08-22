@@ -22,7 +22,7 @@
               }
         }],
         server: {
-            url: 'https://esenttiapp-production.up.railway.app/api/patiocontenedor',
+            url: 'http://esenttiapp.test/api/patiocontenedor',
             headers: {
 
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`

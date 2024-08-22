@@ -57,7 +57,7 @@ $(document).ready(function() {
           }
       ],
       server: {
-          url: `https://esenttiapp-production.up.railway.app/api/showliquidacion`,
+          url: `http://esenttiapp.test/api/showliquidacion`,
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -81,7 +81,7 @@ $(document).ready(function() {
   localStorage.setItem("authToken", data.token);
 
   function numeroFactura(id, factura) {
-      fetch(`https://esenttiapp-production.up.railway.app/api/ActualizarNfactura/${factura}/${id}`, {
+      fetch(`http://esenttiapp.test/api/ActualizarNfactura/${factura}/${id}`, {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json',

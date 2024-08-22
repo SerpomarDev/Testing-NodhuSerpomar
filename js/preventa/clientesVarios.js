@@ -1,6 +1,6 @@
 const apiUrls = {
     local: "http://esenttia.test/api/showclivarios",
-    production: "https://esenttiapp-production.up.railway.app/api/showclivarios"
+    production: "http://esenttiapp.test/api/showclivarios"
 };
 
 const currentEnvironment = "production"
@@ -39,7 +39,7 @@ const apiUrl = apiUrls[currentEnvironment];
       },
     ],
       server: {
-          url: "https://esenttiapp-production.up.railway.app/api/showclivarios",
+          url: "http://esenttiapp.test/api/showclivarios",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },

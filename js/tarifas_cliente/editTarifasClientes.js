@@ -2,7 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/Uploadcostoclientesbyid/${id}`,{
+    fetch(`http://esenttiapp.test/api/Uploadcostoclientesbyid/${id}`,{
         method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -39,7 +39,7 @@ let id = urlParams.get("id");
         const formData = new FormData(this);
         const jsonData = JSON.stringify(Object.fromEntries(formData));
 
-            fetch(`https://esenttiapp-production.up.railway.app/api/costocliente/${id}`, {
+            fetch(`http://esenttiapp.test/api/costocliente/${id}`, {
                 method: "PUT",
                 headers:{ 
                             "Content-Type": "application/json",

@@ -65,7 +65,7 @@ new gridjs.Grid({
     ],
     fixedHeader: true,
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/cargarinventario`,
+        url: `http://esenttiapp.test/api/cargarinventario`,
         headers: {
 
             Authorization: `Bearer ${localStorage.getItem("authToken")}`

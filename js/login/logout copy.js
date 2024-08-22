@@ -4,7 +4,7 @@ async function logoutUser() {
 
     if (authToken) {
         try {
-            const response = await fetch("https://esenttiapp-production.up.railway.app/api/logout", {
+            const response = await fetch("http://esenttiapp.test/api/logout", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function refreshAuthTokenPeriodically() {
         const authToken = localStorage.getItem("authToken");
         if (authToken) {
             try {
-                const response = await fetch("https://esenttiapp-production.up.railway.app/api/refresh", {
+                const response = await fetch("http://esenttiapp.test/api/refresh", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // function verificarToken() {
 //     const token = localStorage.getItem('authToken');
 
-//     fetch('https://esenttiapp-production.up.railway.app/api/navieras', {
+//     fetch('http://esenttiapp.test/api/navieras', {
 //             headers: {
 //                 'Authorization': `Bearer ${token}`
 //             }

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     let selectOrdenCargue = document.getElementById('id_cargue');
 
-    fetch('https://esenttiapp-production.up.railway.app/api/ordencargue',{
+    fetch('http://esenttiapp.test/api/ordencargue',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`

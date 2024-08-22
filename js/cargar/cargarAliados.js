@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',function(){
     let selectAliado = document.getElementById('id_aliado');
     let inputTelefono= document.getElementById('telefonoa');
 
-    fetch('https://esenttiapp-production.up.railway.app/api/uploadalidos',{
+    fetch('http://esenttiapp.test/api/uploadalidos',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     selectAliado.addEventListener('change', function(){
         let  idAliadoSelecionado = this.value
-        fetch(`https://esenttiapp-production.up.railway.app/api/uploadalidosid/${idAliadoSelecionado}`,{
+        fetch(`http://esenttiapp.test/api/uploadalidosid/${idAliadoSelecionado}`,{
             method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

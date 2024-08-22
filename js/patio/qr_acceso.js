@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 async function llenarFormulario() {
     const id = urlParams.get('id'); // Asegúrate de que id tenga un valor.
 
-    const apiUrl = `https://esenttiapp-production.up.railway.app/api/uploadordenbyqr/${id}`; 
+    const apiUrl = `http://esenttiapp.test/api/uploadordenbyqr/${id}`; 
 
     try {
         const response = await fetch(apiUrl, {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',function(){
     let selectRuta = document.getElementById('id_ruta')
     let inputTarifa = document.getElementById('tarifa')
 
-    fetch('https://esenttiapp-production.up.railway.app/api/uploadrutaesenttia',{
+    fetch('http://esenttiapp.test/api/uploadrutaesenttia',{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded',function(){
         let idRutaSeleccionada = this.value
         console.log(idRutaSeleccionada)
 
-        fetch(`https://esenttiapp-production.up.railway.app/api/uploadrutaid/${idRutaSeleccionada}`,{
+        fetch(`http://esenttiapp.test/api/uploadrutaid/${idRutaSeleccionada}`,{
             method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

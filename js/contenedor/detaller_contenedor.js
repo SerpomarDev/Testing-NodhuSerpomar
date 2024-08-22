@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   function mostrarDetalles(id) {
-      fetch(`https://esenttiapp-production.up.railway.app/api/uploadsolisev/${id}`,{
+      fetch(`http://esenttiapp.test/api/uploadsolisev/${id}`,{
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("authToken")}`

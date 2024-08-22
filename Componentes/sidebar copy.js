@@ -1,7 +1,7 @@
 function loadSidebar() {
     const menuItemsContainer = document.getElementById('menu-items-container');
-    const apiUrlMenu = 'https://esenttiapp-production.up.railway.app/api/createmenu';
-    const apiUrlRoles = 'https://esenttiapp-production.up.railway.app/api/uploadroles';
+    const apiUrlMenu = 'http://esenttiapp.test/api/createmenu';
+    const apiUrlRoles = 'http://esenttiapp.test/api/uploadroles';
 
     // Obtener el token y el rol del localStorage
     const token = localStorage.getItem('authToken');

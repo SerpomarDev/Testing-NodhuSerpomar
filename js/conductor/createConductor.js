@@ -62,7 +62,7 @@ new gridjs.Grid({
         }
     ],
     server: {
-        url: "https://esenttiapp-production.up.railway.app/api/uploadconductor",
+        url: "http://esenttiapp.test/api/uploadconductor",
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -100,7 +100,7 @@ document.getElementById('createConductor').addEventListener('submit', function(e
     });
 
 
-    fetch('https://esenttiapp-production.up.railway.app/api/conductores', {
+    fetch('http://esenttiapp.test/api/conductores', {
         method: 'POST', // O PUT/PATCH si es lo que espera tu API
         headers: {
             'Content-Type': 'application/json',

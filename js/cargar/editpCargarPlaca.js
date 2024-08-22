@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
         searchField: 'placa',
         maxItems:1,
         load: function(query, callback) {
-            fetch(`https://esenttiapp-production.up.railway.app/api/loadplaca?search=${encodeURIComponent(query)}`,{
+            fetch(`http://esenttiapp.test/api/loadplaca?search=${encodeURIComponent(query)}`,{
                 method: 'GET',
                     headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let selectPlaca = this.value;
     
-        fetch(`https://esenttiapp-production.up.railway.app/api/uploadplacabyid/${selectPlaca}`,{
+        fetch(`http://esenttiapp.test/api/uploadplacabyid/${selectPlaca}`,{
             method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

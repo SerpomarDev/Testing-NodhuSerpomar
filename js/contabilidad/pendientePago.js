@@ -58,7 +58,7 @@ new gridjs.Grid({
     ],
     fixedHeader: true,
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/asignacionespendientepago`,
+        url: `http://esenttiapp.test/api/asignacionespendientepago`,
         headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -122,7 +122,7 @@ localStorage.setItem("authToken", data.token);
 //     };
 //   });
 
-//   fetch('https://esenttiapp-production.up.railway.app/api/establecerfactura', {
+//   fetch('http://esenttiapp.test/api/establecerfactura', {
 //       method: 'POST',
 //       headers: {
 //           'Content-Type': 'application/json',

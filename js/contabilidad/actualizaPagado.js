@@ -9,7 +9,7 @@ function actualizarPagado(id) {
       confirmButtonText: "Sí, actualizar"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://esenttiapp-production.up.railway.app/api/statepagado/${id}`, {
+        fetch(`http://esenttiapp.test/api/statepagado/${id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

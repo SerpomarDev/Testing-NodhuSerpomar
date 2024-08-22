@@ -5,7 +5,7 @@ let id = urlParams.get("id");
 cargarValores(id)
 function cargarValores(id){
 
-  fetch(`https://esenttiapp-production.up.railway.app/api/asignacioncontenedors/${id}`,{
+  fetch(`http://esenttiapp.test/api/asignacioncontenedors/${id}`,{
     method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
@@ -97,7 +97,7 @@ function cargarValores(id){
       fixedHeader: true,
       //height: '400px',
       server: {
-          url: `https://esenttiapp-production.up.railway.app/api/uploadexpo/${id_contenedor}/${id_cliente}`,
+          url: `http://esenttiapp.test/api/uploadexpo/${id_contenedor}/${id_cliente}`,
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`
           },
@@ -174,7 +174,7 @@ function cargarValores(id){
     }],
     fixedHeader: true,
     server: {
-        url: `https://esenttiapp-production.up.railway.app/api/uploadimpo/${id_contenedor}/${id_cliente}`,
+        url: `http://esenttiapp.test/api/uploadimpo/${id_contenedor}/${id_cliente}`,
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`
         },
@@ -220,7 +220,7 @@ document.getElementById("saveAsignacionEsentt").addEventListener("submit", funct
   const jsonData = JSON.stringify(Object.fromEntries(formData));
   console.log(jsonData)
 
-  fetch("https://esenttiapp-production.up.railway.app/api/saveasignacion", {
+  fetch("http://esenttiapp.test/api/saveasignacion", {
     method: "POST",
     headers: { 
       "Content-Type": "application/json",

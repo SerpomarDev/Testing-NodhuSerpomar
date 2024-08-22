@@ -5,7 +5,7 @@ let id = urlParams.get("id");
 document.getElementById('GeneReportExcelContenedor').addEventListener('click', function(event){
     event.preventDefault();
 
-    fetch(`https://esenttiapp-production.up.railway.app/api/contenedoressp/${id}`,{
+    fetch(`http://esenttiapp.test/api/contenedoressp/${id}`,{
         method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("authToken")}`
