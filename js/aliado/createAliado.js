@@ -48,7 +48,7 @@ const columnDefs = [
   ];
   
 
-    fetch("https://esenttiapp-production.up.railway.app/api/showaliado",{
+    fetch("http://esenttiapp.test/api/showaliado",{
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("authToken")}`
       }
