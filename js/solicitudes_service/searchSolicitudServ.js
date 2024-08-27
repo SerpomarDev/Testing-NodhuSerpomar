@@ -99,9 +99,6 @@ new gridjs.Grid({
 }).render(document.getElementById('ordenService'));
 
 
-// const cantidadFacturados = localStorage.getItem('cantidadFacturados');
-// const cantidadContenedor = localStorage.getItem('cantidadContenedor');
-
 // const columnDefs = [
 //     { headerName: "#", field: "id_primario", hide: true },
 //     { 
@@ -124,37 +121,7 @@ new gridjs.Grid({
 //     { headerName: "Tipo Transporte", field: "impexp" },
 //     { headerName: "Cliente", field: "cliente" },
 //     { headerName: "Fecha Entrada", field: "fecha_actualizacion" },
-//     { headerName: "Pendiente Liquidar", 
-//       field: "pendiente_liquidar",
-//       cellRenderer: async params => {
-//         const container = document.createElement('div');
-
-//         // Crear dos <span> para mostrar los resultados
-//         const span1 = document.createElement('span');
-//         const span2 = document.createElement('span');
-//         const separator = document.createElement('span');
-//         separator.textContent = '/';
-
-//         // Asignar valores iniciales
-//         span1.textContent = 'Cargando...';
-//         span2.textContent = 'Cargando...';
-
-//         // Obtener los valores de las funciones (asíncronas)
-//         const contenedor = await cantidadContenedor(params.data.id_primario);
-//         const facturados = await pendienteLiquidar(params.data.id_primario);
-
-//         // Asignar los valores a los <span> correspondientes
-//         span1.textContent = contenedor || '0';
-//         span2.textContent = facturados || '0';
-
-//         // Añadir los elementos al contenedor
-//         container.appendChild(span1);
-//         container.appendChild(separator);
-//         container.appendChild(span2);
-
-//         return container;
-//     }
-//      },
+//     { headerName: "Pendiente Liquidar", field: "pendiente_liquidar"},
 //     {
 //         headerName: "Acciones", hide:true,
 //         cellRenderer: params => {
