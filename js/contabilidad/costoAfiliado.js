@@ -111,7 +111,6 @@ new gridjs.Grid({
     }
 }).render(document.getElementById('costoAfiliado'));
 
-localStorage.setItem("authToken", data.token);
 
 function actualizarFactura() {
   // Obtener los IDs seleccionados y sus números de factura

@@ -2,6 +2,7 @@ let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
 
+
     fetch(`http://esenttiapp.test/api/editcontenedor/${id}`,{
       method: 'GET',
         headers: {
