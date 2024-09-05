@@ -79,9 +79,12 @@ function updateTotalAbiertas(data) {
           filter: "agTextColumnFilter",
           floatingFilter: true,
         },
+        enableRangeSelection: true,
+        suppressMultiRangeSelection:true,
         pagination: true,
         paginationPageSize: 20,
         rowData: processedData // Asignar los datos procesados
+        
       };
   
       // Renderizar la tabla en el contenedor
