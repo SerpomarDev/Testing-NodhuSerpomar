@@ -80,7 +80,7 @@ new gridjs.Grid({
   sort: false,
   columns: [{
     name:"id",
-    hidden:true,
+    hidden:false,
   },"Fecha solicitud","contenedor","cliente","Tipo de contenedor","Tipo transporte","Cutoff","operacion",{
     name:"Comentarios",
     hidden:true,
@@ -155,8 +155,6 @@ new gridjs.Grid({
     table: {width:"80%"}
   }
 }).render(document.getElementById('acceso'));
-
-localStorage.setItem("authToken", data.token);
 
 function time() {
     document.getElementById('craeateAccesoPatio').reset();

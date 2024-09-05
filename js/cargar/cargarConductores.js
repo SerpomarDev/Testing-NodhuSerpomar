@@ -1,30 +1,47 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    //obtenemos los ids de los campos seleccionados
+
     let selectNombre = document.getElementById('id_conductor');
     let inputIdentificacion = document.getElementById('identificacion');
     let inputTelefono = document.getElementById('telefono');
   
-    // Carga inicial de los nombres de los conductores en el select
-      fetch('http://esenttiapp.test/api/uploadconductor',{
-        method: 'GET',
-          headers: {
-              'Authorization': `Bearer ${localStorage.getItem("authToken")}`
+    new TomSelect(selectNombre, {
+      valueField: 'id',
+      labelField: 'nombre',
+      searchField: 'nombre',
+      maxItems:1,
+      load: function(query, callback) {
+          fetch(`http://esenttiapp.test/api/uploadconductor?search=${encodeURIComponent(query)}`,{
+            method: 'GET',
+              headers: {
+                  'Authorization': `Bearer ${localStorage.getItem("authToken")}`
+              }
+          })
+          .then(response => response.json())
+          .then(data => {
+                callback(data);
+            })
+            .catch(() => {
+                  callback();
+            });
+      },
+      render: {
+          option: function(item, escape) {
+              return `<div class="">
+                          ${escape(item.nombre)}
+                      </div>`;
+          },
+          item: function(item, escape) {
+              return `<div class="">
+                          ${escape(item.nombre)}
+                      </div>`;
           }
-      })
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(conductor => {
-          let option = document.createElement('option');
-          option.value = conductor.id;
-          option.text = conductor.nombre;
-          selectNombre.appendChild(option);
-        });
-        
-      });
+      }
+  });
+
   
-      // capturamos los valores de telefono e identidicacion mediante el id seleccionado
+  
       selectNombre.addEventListener('change', function() {
 
         let idConductorSeleccionado = this.value

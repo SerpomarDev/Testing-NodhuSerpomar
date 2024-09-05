@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
          let idselectConcepto = this.value
          console.log(idselectConcepto)
   
-            fetch(`http://esenttiapp.test/api/uploadconceptosbyid/${idselectConcepto}`,{
+            fetch(`http://esenttiapp.test/api/uploadconceptosbyid/${idselectConcepto}/${idcliente}`,{
               method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("authToken")}`

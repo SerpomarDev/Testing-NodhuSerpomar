@@ -80,7 +80,7 @@ function updateTotalAbiertas(data) {
           floatingFilter: true,
         },
         pagination: true,
-        paginationPageSize: 7,
+        paginationPageSize: 20,
         rowData: processedData // Asignar los datos procesados
       };
   
