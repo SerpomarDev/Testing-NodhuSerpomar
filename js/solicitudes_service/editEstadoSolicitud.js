@@ -18,7 +18,7 @@ function actualizarEstado(id) {
         })
           .then(response => {
             if (!response.ok) {
-              throw new Error('Error al eliminar el registro');
+              throw new Error('Error al procesar el registro');
             }
             Swal.fire({
               title: "¡Procesado!",
