@@ -163,23 +163,24 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <form id="modalForm">
+            <form id="savePreProgramar" method="POST" enctype="multipart/form-data">
+                <input type="text" name="id_contenedor" id="id_contenedor">
                 <div class="mb-4">
                     <label for="fechaProgramacion" class="block text-sm font-medium">Dia y Hora a Programar</label>
-                    <input type="datetime-local" id="fechaProgramacion" class="w-full px-3 py-2 border rounded">
+                    <input type="date" id="fecha" name="fecha" class="w-full px-3 py-2 border rounded">
                 </div>
                 <div class="mb-4">
                     <label for="tipoOperacion" class="block text-sm font-medium">Tipo de Operación</label>
-                    <select id="tipoOperacion" class="w-full px-3 py-2 border rounded">
-                        <option value="Tipo1">Importación</option>
-                        <option value="Tipo2">Exportación</option>
-                        <option value="Tipo3">Retiro de Vacio</option>
-                        <option value="Tipo4">Traslado</option>
-                        <option value="Tipo5">Devolución</option>
+                    <select id="tipo_servicio" name="tipo_servicio" class="w-full px-3 py-2 border rounded">
+                        <option value="IMPORTACION">Importación</option>
+                        <option value="EXPORTACION">Exportación</option>
+                        <option value="RETIRO VACIO">Retiro de Vacio</option>
+                        <option value="TRASLADO">Traslado</option>
+                        <option value="DEVOLUCION">Devolución</option>
                     </select>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn-save" onclick="submitForm()">Guardar</button>
+                    <button type="submit" class="btn-save" onclick="submitForm()">Guardar</button>
                 </div>
             </form>
         </div>
@@ -194,6 +195,7 @@
 
 
     <script type="text/javascript" src="/js/programacion/pre_porgramar.js"></script>
+    <script type="text/javascript" src="/js/programacion/create_preProgramar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- ag-grid -->
