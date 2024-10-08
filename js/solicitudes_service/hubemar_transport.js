@@ -8,26 +8,6 @@ const columnDefs = [
     { headerName: "Contenedor", field: "numero_contenedor" },
     { headerName: "Tipo servicio", field: "impexp" },
     { headerName: "Cliente", field: "cliente" },
-    //  { 
-    // headerName: "Acción", 
-    // cellRenderer: params => {
-    //     const link = document.createElement('a');
-    //     link.href = '';
-    //     link.onclick = function(e) {
-    //         e.preventDefault();
-    //         actualizarEstado([params.data.id_primario]);
-    //     };
-
-    //     const img = document.createElement('img');
-    //     img.src = '/img/editar-texto.png';
-    //     img.alt = 'Actualizar';
-    //     img.style.width = '20px';
-    //     img.style.height = '20px';
-    //     link.appendChild(img);
-
-    //     return link;
-    // }
-    // }
     {
       headerName: "Acción",
       cellRenderer: params => {

@@ -1,5 +1,6 @@
 // Definir columnas de la tabla
 const columnDefs = [
+    { headerCheckboxSelection: true, checkboxSelection: true, width: 50 },
     { headerName: "id", field: "id_contenedor", hide: true },
     { headerName: "SP", field: "sp" },
     { headerName: "Pedido", field: "pedido" },

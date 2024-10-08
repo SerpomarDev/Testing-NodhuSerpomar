@@ -1,9 +1,8 @@
-// Definir las columnas
 const columnDefs = [
-    { headerName: "#", field: "id_aliado" },
-    { headerName: "Nombre", field: "nombre" },
+    { headerName: "#", field: "id" },
+    { headerName: "Nit", field: "nit" },
     { headerName: "Razón Social", field: "razon_social" },
-    { headerName: "Teléfono", field: "celular" },
+    { headerName: "Descripcion", field: "descripcion" },
     {
       headerName: "Acciones",
       cellRenderer: params => {
@@ -11,10 +10,10 @@ const columnDefs = [
   
         // Botón de Actualizar
         const updateButton = document.createElement('a');
-        updateButton.href = '/view/aliados/edit.html';
+        updateButton.href = '/view/proveedores/edit.html';
         updateButton.onclick = function(e) {
           e.preventDefault();
-          editAliado(params.data.id_aliado);
+          editProveedor(params.data.id);
         };
         const updateImg = document.createElement('img');
         updateImg.src = '/img/editar-texto.png';
@@ -25,10 +24,10 @@ const columnDefs = [
   
         // Botón de Eliminar
         const deleteButton = document.createElement('a');
-        deleteButton.href = '/view/aliados/create.html';
+        deleteButton.href = '/view/proveedores/create.html';
         deleteButton.onclick = function(e) {
           e.preventDefault();
-          deleteAliado(params.data.id_aliado);
+          deleteProveedor(params.data.id);
         };
         const deleteImg = document.createElement('img');
         deleteImg.src = '/img/basura.png';
@@ -47,19 +46,19 @@ const columnDefs = [
     }
   ];
   
-    fetch("http://esenttiapp.test/api/showaliado",{
+    fetch("http://esenttiapp.test/api/uploadproveedor",{
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("authToken")}`
       }
     })
     .then(response => response.json())
     .then(data => {
-      const processedData = data.map(aliado => {
+      const processedData = data.map(proveedor => {
         return {
-          id_aliado: aliado.id_aliado,
-          nombre: aliado.nombre,
-          razon_social: aliado.razon_social,
-          celular: aliado.celular,
+          id: proveedor.id,
+          nit: proveedor.nit,
+          razon_social: proveedor.razon_social,
+          descripcion: proveedor.descripcion,
         };
       });
   
@@ -78,58 +77,49 @@ const columnDefs = [
       };
   
       // Renderizar la tabla en el contenedor
-        const eGridDiv = document.getElementById('aliado');
+        const eGridDiv = document.getElementById('proveedores');
         new agGrid.Grid(eGridDiv, gridOptions);
     })
     .catch(error => {
       console.error("Error al cargar los datos:", error);
     });
 
-
-  document.getElementById('createAliado').addEventListener('submit', function(event) {
+    document.getElementById('createProveedor').addEventListener('submit', function(event) {
     event.preventDefault();
-  
+
     const formData = new FormData(this);
-  
+
     const jsonData = JSON.stringify(Object.fromEntries(formData));
-    
-    fetch('http://esenttiapp.test/api/aliados', {
-        method: 'POST',
-        headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem("authToken")}`
-         },
-        body: jsonData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error al enviar los datos del formulario');
-        }
-    })
-    .then(data => {
-        Swal.fire({
-          title: "¡Buen trabajo!",
-          text: "¡Has creado un aliado",
-          icon: "success",
+
+    fetch('http://esenttiapp.test/api/proveedor', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem("authToken")}`
+            },
+            body: jsonData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al enviar los datos del formulario');
+            }
+        })
+        .then(data => {
+            Swal.fire({
+                title: "¡Buen trabajo!",
+                text: "¡Has creado un Cliente",
+                icon: "success",
+            });
+            setTimeout(() => {
+                location.reload();
+              }, 1500);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
         });
-    })
-    .then((response)=>{
-     time();
-    })
-  });
+    });
 
-  function time() {
-    document.getElementById('createAliado').reset();
-    setTimeout(() => {
-        window.location.href = `/view/aliados/create.html`; 
-    },  1200);
-  }   
 
-  function editAliado(id) {
-  
-    window.location.href = `/view/aliados/edit.html?id=${id}`
-}
-
-function deleteAliado(id){
-    DeleteData(id)
-}
+    function editProveedor(id) {
+      window.location.href = `/view/proveedores/edit.html?id=${id}`
+  }
